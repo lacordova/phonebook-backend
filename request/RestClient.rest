@@ -1,0 +1,33 @@
+GET http://localhost:3002/info
+
+###
+GET http://localhost:3002/api/persons
+
+###
+DELETE http://localhost:3002/api/persons/5
+
+
+###
+POST http://localhost:3002/api/persons
+content-type: application/json
+
+{
+    "name": "karla Simon",
+    "number":"1313691313"
+}
+
+###
+POST http://localhost:3002/api/persons
+content-type: application/json
+
+{
+    "name": "Lucas Cordova"
+}
+###
+POST http://localhost:3002/api/persons
+content-type: application/json  
+
+{
+    "number": "1234"
+}
+
