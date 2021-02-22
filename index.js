@@ -1,6 +1,6 @@
 const express = require('express')
-const getDate = require('./getDate')
-const generateId = require('./generateId')
+const getDate = require('./lib/getDate')
+const generateId = require('./lib/generateId')
 const morgan = require('morgan')
 const cors = require('cors')
 
@@ -102,5 +102,5 @@ app.get("/api/persons/:id", handleGetNoteId)
 app.delete('/api/persons/:id',handleDeletePerson)
 app.post('/api/persons' ,handlePostPerson)
 
-const PORT  = 3002
+const PORT  = process.env.PORT || 3002
 app.listen(PORT, () => console.log(`server running on port ${PORT}`))
