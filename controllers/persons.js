@@ -2,11 +2,9 @@ const personsRouter = require('express').Router()
 const Person = require('../models/person')
 const getDate = require('../utils/getDate')
 
-const handleGetPersons = (req,res,next) => {
-  Person.find({})
-    .then(persons => {
-      res.json(persons)
-    })
+const handleGetPersons = async (req,res,next) => {
+  const personsFinded = await Person.find({})
+  res.json(personsFinded)
     .catch(err => next(err))
 }
 
